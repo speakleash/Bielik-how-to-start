@@ -12,7 +12,7 @@ First two examples can be use as a base for other use cases.
 |----------------------------------------------------------------------------------------------------|------------------------------------|----------------|
 | Speakleash_Notatnik_Bielik_(4_bit)_RAG.ipynb                                                       | RAG with HuggingFace transformers  | description_1  |
 | Speakleash_Notatnik_Bielik_(4_bit)_simple_examples.ipynb                                           | Work with text, docs, inference    | description_2  |
-| place_for_notebook_name_3                                                                          | e.g. RAG with different tech stack | description_3  |
+| Speakleash_Bielik_Data_Generation_and_Finetuning_(4_bit).ipynb                                     | Data Generation, Few-shot prompting| description_3  |
 | place_for_notebook_name_4                                                                          | e.g. embeddings                    | description_4  |
 | place_for_notebook_name_5                                                                          | e.g. function calling              | description_5  |
 | place_for_notebook_name_6                                                                          | e.g. evaluation                    | description_6  |
