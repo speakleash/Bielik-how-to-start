@@ -1,0 +1,5 @@
+transformers==4.43.3
+vllm==0.5.4
+sentence-transformers==3.0.1
+gradio==4.41.0
+pymupdf==1.24.9
