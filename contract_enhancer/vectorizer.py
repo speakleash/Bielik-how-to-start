@@ -1,5 +1,4 @@
 from sentence_transformers import SentenceTransformer
-from sentence_transformers.util import cos_sim
 
 query_prefix = "zapytanie: "
 answer_prefix = ""

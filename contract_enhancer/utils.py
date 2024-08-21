@@ -2,10 +2,10 @@ import fitz
 from vectorizer import vectorize
 import re
 import numpy as np
-from transformers import AutoTokenizer
 
-from logging import getLogger
-logger = getLogger(__name__)
+import logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 
 def parse_pdf(fname, callback=None):
@@ -84,7 +84,7 @@ def prepare_prompt(samples, text, tokenizer):
     ]
     
     chat_applied = tokenizer.apply_chat_template(msg, add_generation_prompt=True, tokenize=False)
-    print(chat_applied)
+    logger.info(chat_applied)
     return chat_applied
 
 if __name__ == "__main__":
