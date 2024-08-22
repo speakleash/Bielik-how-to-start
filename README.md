@@ -12,6 +12,7 @@ First two examples can be use as a base for other use cases.
 | -------------------------------------------------------------- | ----------------------------------- | -------------------------------------------------------------------------------------- |
 | Speakleash_Notatnik_Bielik_(4_bit)_RAG.ipynb                   | RAG with HuggingFace transformers   | description_1                                                                          |
 | Speakleash_Notatnik_Bielik_(4_bit)_simple_examples.ipynb       | Work with text, docs, inference     | description_2                                                                          |
+| Speakleash_Bielik_Streamlit_simple_app_tunnel_GGUF_Q4.ipynb    | Inference with streaming | Simple Streamlit app with streaming from quantized Bielik (GGUF Q4) on collab with tunnel
 | Speakleash_Bielik_Data_Generation_and_Finetuning_(4_bit).ipynb | Data Generation, Few-shot prompting | description_3                                                                          |
 | contract_enhancer                                              | RAG for contract enhancement        | Bielik will show you how to improve your contracts based on your own contract library. |
 | place_for_notebook_name_5                                      | e.g. function calling               | description_5                                                                          |
