@@ -1,8 +1,11 @@
 from asyncio import run
 from draive import LMM, ctx, generate_text
+from draive import setup_logging
 from draive.ollama import OllamaClient, ollama_lmm_invocation, OllamaChatConfig
 
-async def main() -> None:
+setup_logging("text_completion")
+
+async def main(provided_model, provided_temp) -> None:
 
     async def text_completion(text: str) -> str:
         # generate_text is a simple interface for generating text
@@ -17,7 +20,10 @@ async def main() -> None:
         "text_completion",
         state=[
                 LMM(invocation=ollama_lmm_invocation),
-                OllamaChatConfig(model='SpeakLeash/bielik-7b-instruct-v0.1-gguf')
+                OllamaChatConfig(
+                        model=provided_model,
+                        temperature=provided_temp,
+                )
                ],  # set currently used LMM to OpenAI
         dependencies=[OllamaClient],  # use OpenAIClient dependency for accessing OpenAI services
     ):
@@ -25,5 +31,8 @@ async def main() -> None:
             text="Roses are red...",
         )
 
-        print(result)
-run(main=main())
+        print(f'RESULT {provided_model} | temperature {provided_temp}:\n{result}')
+
+model = 'SpeakLeash/bielik-7b-instruct-v0.1-gguf'
+temperature = 0.2
+run(main=main(model, temperature))
