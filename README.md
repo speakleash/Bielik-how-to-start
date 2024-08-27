@@ -10,7 +10,7 @@ Repozytorium zawiera skrypty oraz notatniki, które przedstawiają różne przyk
 
 1. Python<br>
    Aby móc pracować z kodem, zalecana jest instalacja Pythona w wersji `>=3.9`.
-   Instrukcje instalacji można znaleźć na oficjalnej stronie Pythona: https://www.python.org/downloads/
+   Instrukcje instalacji można znaleźć na oficjalnej stronie Pythona:<br> https://www.python.org/downloads/
 
 2. Jupyter Notebook<br>
    Zalecana jest praca w środowisku Jupyter Notebook.
