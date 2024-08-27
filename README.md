@@ -15,8 +15,8 @@ Repozytorium zawiera skrypty oraz notatniki, które przedstawiają różne przyk
 2. Jupyter Notebook<br>
    Zalecana jest praca w środowisku Jupyter Notebook.
    Instrukcje instalacji i uruchomienia Jupyter Notebook: <br>
-   `https://jupyter.org/install`
-   Do każdego notebooka załączony jest link prowadzący do przestrzeni Google Colab zawierającej kod z danym przykładem użycia.
+   https://jupyter.org/install
+   <br>Do każdego notebooka załączony jest link prowadzący do przestrzeni Google Colab zawierającej kod z danym przykładem użycia.
 
 ## Rozpoczęcie pracy
 
