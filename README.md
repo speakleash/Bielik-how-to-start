@@ -14,15 +14,16 @@ Repozytorium zawiera skrypty oraz notatniki, które przedstawiają różne przyk
 
 2. Jupyter Notebook<br>
    Zalecana jest praca w środowisku Jupyter Notebook.
-   Instrukcje instalacji i uruchomienia Jupyter Notebook: https://jupyter.org/install
+   Instrukcje instalacji i uruchomienia Jupyter Notebook: <br>
+   `https://jupyter.org/install`
    Do każdego notebooka załączony jest link prowadzący do przestrzeni Google Colab zawierającej kod z danym przykładem użycia.
 
 ## Rozpoczęcie pracy
 
-1. Sklonuj to repozytorium na swój lokalny komputer:
+1. Sklonuj to repozytorium na swój lokalny komputer:<br>
    `git clone https://github.com/speakleash/Bielik-how-to-start.git`
 2. Uruchom Jupyter Notebook i otwórz wybrany notatnik z przykładami.
-3. W przypadku przykładów znajdujących się osobno w folderach (draive, contract_enhancer) należy uprzednio zainstalować wymagane zależności:
+3. W przypadku przykładów znajdujących się osobno w folderach (draive, contract_enhancer) należy uprzednio zainstalować wymagane zależności:<br>
    `pip install -r requirements.txt`
 
 W przypadku problemów lub pytań, sprawdź sekcję "Issues" w repozytorium lub skontaktuj się z autorami projektu.
