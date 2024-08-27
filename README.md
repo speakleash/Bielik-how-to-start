@@ -10,7 +10,7 @@ First two examples can be use as a base for other use cases.
 
 | Notebook                                                              | Category                            | Description                                                                            |
 |-----------------------------------------------------------------------|-------------------------------------| -------------------------------------------------------------------------------------- |
-| Speakleash_Notatnik_Bielik_(4_bit)_RAG.ipynb                          | RAG with HuggingFace transformers   | description_1                                                                          |
+| Speakleash_Bielik_(4_bit)_RAG.ipynb                                   | RAG with HuggingFace transformers   | description_1                                                                          |
 | Speakleash_Bielik_(4_bit)_simple_examples.ipynb                       | Work with text, docs, inference     | description_2                                                                          |
 | Speakleash_Bielik_Streamlit_simple_app_tunnel_GGUF_Q4.ipynb           | Inference with streaming            | Simple Streamlit app with streaming from quantized Bielik (GGUF Q4) on collab with tunnel
 | Speakleash_Bielik_Data_Generation_and_Fewshot_Prompting_(4_bit).ipynb | Data Generation, Few-shot prompting | description_3                                                                          |
