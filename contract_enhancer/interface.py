@@ -8,8 +8,8 @@ from vllm import LLM, SamplingParams
 import utils
 
 sampling_params = SamplingParams(temperature=1.0, max_tokens=512)
-tokenizer = AutoTokenizer.from_pretrained("speakleash/Bielik-7B-Instruct-v0.1")
-llm = LLM(model="speakleash/Bielik-7B-Instruct-v0.1")
+tokenizer = AutoTokenizer.from_pretrained("speakleash/Bielik-11B-v2.2-Instruct")
+llm = LLM(model="speakleash/Bielik-11B-v2.2-Instruct")
 
 with gr.Blocks(fill_width=True) as demo:
     with gr.Row():
