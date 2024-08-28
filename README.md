@@ -1,35 +1,44 @@
 <h1 align="center">
 <img src="https://huggingface.co/speakleash/Bielik-7B-Instruct-v0.1/raw/main/speakleash_cyfronet.png">
-</h1><br>
+</h1>
 
 # Jak zacząć pracę z Bielikiem
 
-Repozytorium zawiera skrypty oraz notatniki, które przedstawiają różne przykłady użycia LLM Bielika.
+Repozytorium zawiera przykłady użycia LLM Bielika w formie notatników Jupyter.
 
-## Wymagania:
+## Wymagania
 
-1. Python<br>
+1. Python
+
    Aby móc pracować z kodem, zalecana jest instalacja Pythona w wersji `>=3.9`.
-   Instrukcje instalacji można znaleźć na oficjalnej stronie Pythona:<br> https://www.python.org/downloads/
+   Instrukcje instalacji można znaleźć na oficjalnej stronie Pythona:
 
-2. Jupyter Notebook<br>
+   <https://www.python.org/downloads/>
+
+2. Jupyter Notebook
+
    Zalecana jest praca w środowisku Jupyter Notebook.
-   Instrukcje instalacji i uruchomienia Jupyter Notebook: <br>
-   https://jupyter.org/install
-   <br>Do każdego notebooka załączony jest link prowadzący do przestrzeni Google Colab zawierającej kod z danym przykładem użycia.
+   Instrukcje instalacji i uruchomienia Jupyter Notebook:
+
+   <https://jupyter.org/install>
+
+   Do każdego notebooka załączony jest link prowadzący do przestrzeni Google Colab zawierającej kod z danym przykładem.
 
 ## Rozpoczęcie pracy
 
-1. Sklonuj to repozytorium na swój lokalny komputer:<br>
+1. Sklonuj to repozytorium na swój lokalny komputer:
+
    `git clone https://github.com/speakleash/Bielik-how-to-start.git`
 2. Uruchom Jupyter Notebook i otwórz wybrany notatnik z przykładami.
-3. W przypadku przykładów znajdujących się osobno w folderach (draive, contract_enhancer) należy uprzednio zainstalować wymagane zależności:<br>
+3. W przypadku przykładów znajdujących się w podfolderach (draive, contract_enhancer) należy uprzednio zainstalować wymagane zależności:
+
    `pip install -r requirements.txt`
 
 W przypadku problemów lub pytań, sprawdź sekcję "Issues" w repozytorium lub skontaktuj się z autorami projektu.
 
-## Examples
-Info: Przykłady zawierają odniesienia do wersji V1 oraz V2. Na dniach powinno pojawić sie więcej zaadaptowanych przykładów do najnowszej wersji Bielika
+## Przykłady
+
+Info: Przykłady zawierają odniesienia do wersji V1 oraz V2.  Na dniach powinno pojawić sie więcej zaadaptowanych przykładów do najnowszej wersji Bielika.
 
 | Notebook                                                                            | Collab                                                                                                                                                                                                                                                                                                                                                                                                                                      | Description                                                   |
 |-------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------|
@@ -41,4 +50,4 @@ Info: Przykłady zawierają odniesienia do wersji V1 oraz V2. Na dniach powinno 
 | `Bielik_Streamlit_simple_app_tunnel_4bit.ipynb`                                     | <a target="_blank" href="https://colab.research.google.com/drive/1Pkb_4svxy6AxRePCVqW5q1hieuhgf605?authuser=1"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>                                                                                                                                                                                                                                | Inference with streaming using Streamlit with Bielik 4bit     |
 | `Bielik_Instruct_QUANT_Tests.ipynb`                                                 | <a target="_blank" href="https://colab.research.google.com/drive/1bsU6C4X0RMRRzsrMAvzGoaqioaqo_p29?authuser=1"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>                                                                                                                                                                                                                                | e.g. RAG, function calling                                    |
 | `draive`                                                                            |                                                                                                                                                                                                                                                                                                                                                                                                                                             | Inference using draive lib                                    |                                                               |
-| `contract_enhancer`                                                                 |                                                                                                                                                                                                                                                                                                                                                                                                                                             | RAG for contract enhancement                                  | 
+| `contract_enhancer`                                                                 |                                                                                                                                                                                                                                                                                                                                                                                                                                             | RAG for contract enhancement                                  |
