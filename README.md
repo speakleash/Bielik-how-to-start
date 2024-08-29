@@ -31,6 +31,39 @@ W przypadku problemów lub pytań, sprawdź sekcję "Issues" w repozytorium lub 
 ## Examples
 Info: Przykłady zawierają odniesienia do wersji V1 oraz V2. Na dniach powinno pojawić sie więcej zaadaptowanych przykładów do najnowszej wersji Bielika
 
+<h1 align="center">
+<img src="https://huggingface.co/speakleash/Bielik-7B-Instruct-v0.1/raw/main/speakleash_cyfronet.png">
+</h1><br>
+
+# Jak zacząć pracę z Bielikiem
+
+Repozytorium zawiera skrypty oraz notatniki, które przedstawiają różne przykłady użycia LLM Bielika.
+
+## Wymagania:
+
+1. Python<br>
+   Aby móc pracować z kodem, zalecana jest instalacja Pythona w wersji `>=3.9`.
+   Instrukcje instalacji można znaleźć na oficjalnej stronie Pythona:<br> https://www.python.org/downloads/
+
+2. Jupyter Notebook<br>
+   Zalecana jest praca w środowisku Jupyter Notebook.
+   Instrukcje instalacji i uruchomienia Jupyter Notebook: <br>
+   https://jupyter.org/install
+   <br>Do każdego notebooka załączony jest link prowadzący do przestrzeni Google Colab zawierającej kod z danym przykładem użycia.
+
+## Rozpoczęcie pracy
+
+1. Sklonuj to repozytorium na swój lokalny komputer:<br>
+   `git clone https://github.com/speakleash/Bielik-how-to-start.git`
+2. Uruchom Jupyter Notebook i otwórz wybrany notatnik z przykładami.
+3. W przypadku przykładów znajdujących się osobno w folderach (draive, contract_enhancer) należy uprzednio zainstalować wymagane zależności:<br>
+   `pip install -r requirements.txt`
+
+W przypadku problemów lub pytań, sprawdź sekcję "Issues" w repozytorium lub skontaktuj się z autorami projektu.
+
+## Examples
+Info: Przykłady zawierają odniesienia do wersji V1 oraz V2. Na dniach powinno pojawić sie więcej zaadaptowanych przykładów do najnowszej wersji Bielika
+
 | Notebook                                                                          | Collab                                                                                                                                                                                                                                                                                                                                                                                                                                      | Description                                                   |
 |-----------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------|
 | `Bielik_(4_bit)_RAG.ipynb` <br> `Bielik_2_(4_bit)_RAG.ipynb`                      | V1: <a target="_blank" href="https://colab.research.google.com/drive/13XCBuJQsaeGi6HvfMc1MDZn0RNsrP8yp?authuser=1"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="V1 Open In Colab"/></a> <br>V2: <a target="_blank" href="https://colab.research.google.com/drive/1ZdYsJxLVo9fW75uonXE5PCt8MBgvyktA?authuser=1"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="V2 Open In Colab"/></a> | RAG with HuggingFace transformers                             |
