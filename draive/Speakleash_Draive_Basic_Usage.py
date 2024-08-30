@@ -37,7 +37,8 @@ async def main(provided_model, provided_temp) -> None:
 
         print(f'RESULT {provided_model} | temperature {provided_temp}:\n{result}')
 
-
-MODEL = 'SpeakLeash/bielik-7b-instruct-v0.1-gguf'
+# Wybież jeden z poniższych modeli do generowania odpowiedzi
+MODEL_V1 = 'SpeakLeash/bielik-7b-instruct-v0.1-gguf:Q4_K_S'
+MODEL_V2 = 'SpeakLeash/bielik-11b-v2.2-instruct:Q4_K_M'
 TEMPERATURE = 0.2
-run(main=main(MODEL, TEMPERATURE))
+run(main=main(MODEL_V2, TEMPERATURE))
