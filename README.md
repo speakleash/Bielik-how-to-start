@@ -4,7 +4,7 @@
 
 # Jak zacząć pracę z Bielikiem
 
-Repozytorium zawiera skrypty oraz notatniki, które przedstawiają różne przykłady użycia LLM Bielika.
+Repozytorium zawiera skrypty oraz notatniki, które przedstawiają różne przykłady użycia LLM Bielik.
 
 ## Wymagania:
 
