@@ -29,7 +29,9 @@ Repozytorium zawiera skrypty oraz notatniki, które przedstawiają różne przyk
 W przypadku problemów lub pytań, sprawdź sekcję "Issues" w repozytorium lub skontaktuj się z autorami projektu.
 
 ## Examples
-Info: Przykłady zawierają odniesienia do wersji V1 oraz V2. Na dniach powinno pojawić sie więcej zaadaptowanych przykładów do najnowszej wersji Bielika
+
+> **Info**
+>  Przykłady zawierają odniesienia do wersji V1 oraz V2. Na dniach powinno pojawić sie więcej zaadaptowanych przykładów do najnowszej wersji Bielika
 
 | Notebook/code                                                                        | Bielik version                                                                                                                                                                                                                                                                                                                                                                                                                              | Description                                                    |
 |--------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------|
