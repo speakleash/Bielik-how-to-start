@@ -20,7 +20,7 @@ Repozytorium zawiera skrypty oraz notatniki, które przedstawiają różne przyk
 
 ## Rozpoczęcie pracy
 
-1. Sklonuj to repozytorium na swój lokalny komputer:<br>
+1. Sklonuj repozytorium na swój lokalny komputer:<br>
    > `git clone https://github.com/speakleash/Bielik-how-to-start.git`
 2. Uruchom Jupyter Notebook i otwórz wybrany notatnik z przykładami.
 3. W przypadku przykładów znajdujących się osobno w folderach (draive, contract_enhancer) należy uprzednio zainstalować wymagane zależności:<br>
