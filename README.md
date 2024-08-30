@@ -21,16 +21,16 @@ Repozytorium zawiera skrypty oraz notatniki, które przedstawiają różne przyk
 ## Rozpoczęcie pracy
 
 1. Sklonuj to repozytorium na swój lokalny komputer:<br>
-   `git clone https://github.com/speakleash/Bielik-how-to-start.git`
+   > `git clone https://github.com/speakleash/Bielik-how-to-start.git`
 2. Uruchom Jupyter Notebook i otwórz wybrany notatnik z przykładami.
 3. W przypadku przykładów znajdujących się osobno w folderach (draive, contract_enhancer) należy uprzednio zainstalować wymagane zależności:<br>
-   `pip install -r requirements.txt`
+   > `pip install -r requirements.txt`
 
 W przypadku problemów lub pytań, sprawdź sekcję "Issues" w repozytorium lub skontaktuj się z autorami projektu.
 
 ## Examples
 
-> **Info**
+> **Info:**
 >  Przykłady zawierają odniesienia do wersji V1 oraz V2. Na dniach powinno pojawić sie więcej zaadaptowanych przykładów do najnowszej wersji Bielika
 
 | Notebook/code                                                                        | Bielik version                                                                                                                                                                                                                                                                                                                                                                                                                              | Description                                                    |
