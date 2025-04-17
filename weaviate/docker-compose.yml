@@ -1,0 +1,39 @@
+---
+services:
+  weaviate:
+    command:
+    - --host
+    - 0.0.0.0
+    - --port
+    - '8080'
+    - --scheme
+    - http
+    - --write-timeout=600s
+    - --read-timeout=600s
+    image: cr.weaviate.io/semitechnologies/weaviate:1.27.6
+    ports:
+    - 8080:8080
+    - 50051:50051
+    volumes:
+    - ./.data/weaviate:/var/lib/weaviate
+    restart: on-failure:0
+    environment:
+      QUERY_DEFAULTS_LIMIT: 25
+      AUTHENTICATION_ANONYMOUS_ACCESS_ENABLED: 'true'
+      PERSISTENCE_DATA_PATH: '/var/lib/weaviate'
+      CLUSTER_HOSTNAME: 'weaviate-0'
+      DEFAULT_VECTORIZER_MODULE: 'none'
+      MODULES_CLIENT_TIMEOUT: '600s'
+      ENABLE_MODULES: 'text2vec-transformers,generative-ollama'
+      TRANSFORMERS_INFERENCE_API: 'http://t2v-transformers-baai-bge-m3-onnx:8080'
+  t2v-transformers-baai-bge-m3-onnx:
+    image: cr.weaviate.io/semitechnologies/transformers-inference:baai-bge-m3-onnx
+  t2v-transformers-ipipan-silver-retriever-base-v1.1:
+    build:
+      dockerfile: ./ipipan.Dockerfile
+  generative-ollama:
+    image: ollama/ollama:0.3.14
+    container_name: generative_ollama
+    volumes:
+    - ./.data/generative_ollama:/root/.ollama
+...
