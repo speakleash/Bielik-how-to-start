@@ -1,7 +1,7 @@
 # /// script
 # requires-python = ">=3.12"
 # dependencies = [
-#     "draive[ollama]~=0.37",
+#     "draive[ollama]~=0.87.5",
 # ]
 # ///
 #
@@ -9,8 +9,8 @@
 from asyncio import run
 from typing import Sequence
 
-from draive import DataModel, ctx, generate_model, setup_logging
-from draive.ollama import OllamaChatConfig, ollama_lmm
+from draive import DataModel, ModelGeneration, ctx, setup_logging
+from draive.ollama import Ollama, OllamaChatConfig
 
 setup_logging("model_generation")
 
@@ -30,16 +30,16 @@ class Formula(DataModel):
     ingredients: Sequence[Ingredient]
 
 
-async def main(provided_model, provided_temp) -> None:
+async def main() -> None:
     async with ctx.scope(  # przygotowanie nowego kontekstu
         "model_generation",
-        ollama_lmm(),  # użycie ollama jako llm w kontekście
         OllamaChatConfig(
-            model=provided_model,
-            temperature=provided_temp,
+            model="SpeakLeash/bielik-4.5b-v3.0-instruct:FP16",
+            temperature=0.7,
         ),
+        disposables=(Ollama(),),  # użycie ollama jako llm w kontekście
     ):
-        result: Formula = await generate_model(
+        result: Formula = await ModelGeneration.generate(
             # Podajemy jaki model danych chcemy wyprodukować
             Formula,
             # Należy podać instrukcje / systemowy prompt, aby poinstruować model
@@ -50,11 +50,7 @@ async def main(provided_model, provided_temp) -> None:
             input="Podaj przepis na sękacza.",
         )
 
-        print(f"RESULT {provided_model} | temperature {provided_temp}:\n{result}")
+        print("RESULT:\n", result)
 
 
-# Wybież jeden z poniższych modeli do generowania odpowiedzi
-MODEL_V1 = "SpeakLeash/bielik-7b-instruct-v0.1-gguf:Q4_K_S"
-MODEL_V2 = "SpeakLeash/bielik-11b-v2.2-instruct:Q4_K_M"
-TEMPERATURE = 0.2
-run(main=main(MODEL_V2, TEMPERATURE))
+run(main=main())

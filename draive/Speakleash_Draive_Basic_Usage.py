@@ -1,50 +1,38 @@
 # /// script
 # requires-python = ">=3.12"
 # dependencies = [
-#     "draive[ollama]~=0.37",
+#     "draive[ollama]~=0.87.5",
 # ]
 # ///
 #
-"""
-Poniższy kod jest adaptacją przykładu z biblioteki Draive znajdującego się pod linkiem:
-https://github.com/miquido/draive/blob/main/guides/BasicUsage.ipynb
-"""
+
 
 from asyncio import run
 
-from draive import ctx, generate_text, setup_logging
-from draive.ollama import OllamaChatConfig, ollama_lmm
+from draive import TextGeneration, ctx, setup_logging
+from draive.ollama import Ollama, OllamaChatConfig
 
 setup_logging("text_completion")
 
 
-async def main(provided_model, provided_temp) -> None:
-    async def text_completion(text: str) -> str:
-        # generate_text to prosty interfejs przeznaczony do generowania tekstu
-        return await generate_text(
+async def main() -> None:
+    async with ctx.scope(  # przygotowanie nowego kontekstu
+        "text_completion",
+        OllamaChatConfig(
+            model="SpeakLeash/bielik-4.5b-v3.0-instruct:FP16",
+            temperature=0.7,
+        ),
+        disposables=(Ollama(),),  # użycie ollama jako llm w kontekście
+    ):
+        # TextGeneration to prosty interfejs przeznaczony do generowania tekstu
+        result: str = await TextGeneration.generate(
             # Należy podać instrukcje / systemowy prompt, aby poinstruować model
             instruction="Prepare the simplest completion of a given text",
             # wejście jest podawane oddzielnie od instrukcji
-            input=text,
+            input="Z jakich składników robi się sękacza?.",
         )
 
-    async with ctx.scope(  # przygotowanie nowego kontekstu
-        "text_completion",
-        ollama_lmm(),  # użycie ollama jako llm w kontekście
-        OllamaChatConfig(
-            model=provided_model,
-            temperature=provided_temp,
-        ),
-    ):
-        result: str = await text_completion(
-            text="Z jakich składników robi się sękacza?.",
-        )
-
-        print(f"RESULT {provided_model} | temperature {provided_temp}:\n{result}")
+        print("RESULT:\n", result)
 
 
-# Wybież jeden z poniższych modeli do generowania odpowiedzi
-MODEL_V1 = "SpeakLeash/bielik-7b-instruct-v0.1-gguf:Q4_K_S"
-MODEL_V2 = "SpeakLeash/bielik-11b-v2.2-instruct:Q4_K_M"
-TEMPERATURE = 0.2
-run(main=main(MODEL_V2, TEMPERATURE))
+run(main=main())
