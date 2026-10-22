@@ -24,6 +24,8 @@ Przed uruchomieniem notebooków należy przygotować środowisko:
 docker compose up
 ```
 
+> Jeśli masz dane z wcześniejszej wersji Weaviate (katalog `.data/weaviate`), usuń go przed uruchomieniem i ponownie wykonaj [0-import.ipynb](./notebooks/0-import.ipynb). Weaviate nie wspiera pomijania wersji minor przy aktualizacji.
+
 2. Zanim przystąpisz do pracy ściągnij lokalnie Bielika wewnątrz kontenera Ollama:
 
 ```sh
